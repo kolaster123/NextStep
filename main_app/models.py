@@ -1,6 +1,7 @@
 
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import User
 from enum import Enum
 
 class DifficultyLevel(Enum):
@@ -21,6 +22,7 @@ class Idea(models.Model):
     company = models.CharField(max_length=50)
     details = models.TextField(max_length=500)
     difficulty = models.IntegerField(choices=[(tag.value, tag.name) for tag in DifficultyLevel], default= 1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def set_difficulty(self, difficulty):
         if isinstance(difficulty, DifficultyLevel):

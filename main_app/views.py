@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
 from .models import Idea
 
-# Define the home view function
-def home(request):
-    return render(request, 'home.html')
+class Home(LoginView):
+    template_name = 'home.html'
 
 def about(request):
     return render(request, 'about.html')
