@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/logo.png' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/bgremove.png' %}" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     <title>NextStep</title>
     {% block head %} 
@@ -13,28 +13,32 @@
   </head>
   <body>
     <header>
-      <div class="header-logo-container">
-        <a href="/">
-          <img src="" alt="The Cat Collector Logo" />
-        </a>
-      </div>
-      <nav>
-        <ul>
-          {% if user.is_authenticated %}
-          <li><a href="{% url 'idea-create' %}">Add an Idea</a></li>
-          <li><a href="{% url 'ideas-index' %}">All Ideas</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
-            {% csrf_token %}
-            <button type="submit">Log out</button>
-          </form>
-          </li>
-          {% else %}
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'home' %}">Login</a></li>
-          {% endif %}
-
-        </ul>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="logo-container">
+            <a href="/">
+              <img src="{% static 'images/bgremove.png' %}" alt="Logo"/>
+            </a>
+          </div>
+          <div class="links-container">
+            <ul class="links">  
+              {% if user.is_authenticated %}
+              <li><a href="{% url 'idea-create' %}">Add an Idea</a></li>
+              <li><a href="{% url 'ideas-index' %}">All Ideas</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li>
+                <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+                  {% csrf_token %}
+                  <button type="submit">Log out</button>
+                </form>
+              </li>
+              {% else %}
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'home' %}">Login</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>

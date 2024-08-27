@@ -1,1 +1,2 @@
 https://docs.djangoproject.com/en/5.0/ref/models/fields/#model-field-types
+https://www.youtube.com/watch?v=O5YkEFLXcRg
