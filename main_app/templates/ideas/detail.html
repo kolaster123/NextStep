@@ -9,7 +9,7 @@
 <section class="cat-container">
   <div class="cat-img">
     {%if idea.img%}
-    <img src="{{ idea.img.url }}" alt="Image of {{ idea.name }}" width= 100%/>
+    <img src="{{ idea.img.url }}" alt="Image of {{ idea.name }}" width= 300px/>
     {% endif %}
   </div>
   <div class="cat-details">
@@ -17,18 +17,9 @@
     <h2>Company: {{ idea.company }}</h2>
     <p>Details: {{ idea.details }}</p>
     <p> Difficulty: {{idea.difficulty}}</p>
-    <select>
-        <option value= "ONE"> 1 </option>
-        <option value= "TWO"> 2 </option>
-        <option value= "THREE"> 3 </option>
-        <option value= "FOUR"> 4 </option>
-        <option value= "FIVE"> 5 </option>
-        <option value= "SIX"> 6 </option>
-        <option value= "SEVEN"> 7 </option>
-        <option value= "EIGHT"> 8 </option>
-        <option value= "NINE"> 9 </option>
-        <option value= "TEN"> 10 </option>
-      </select>
+    <div class="cat-actions">
+    <a href="{% url 'idea-update' idea.id %}" class="btn warn">Edit</a>
+    <a href="{% url 'idea-delete' idea.id %}" class="btn danger">Delete</a>
   </div>
 </section>
 {% endblock %}
