@@ -17,11 +17,11 @@ def idea_detail(request, idea_id):
     idea = Idea.objects.get( id=idea_id)
     return render(request,'ideas/detail.html', {'idea':idea})
 
-class IdeaCreate(CreateView):
+class IdeaCreate(CreateView, ):
   model = Idea
   fields = '__all__'
 
-class IdeaUpdate(UpdateView):
+class IdeaUpdate(UpdateView, ):
   model = Idea
   fields = '__all__'
 

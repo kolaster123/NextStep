@@ -8,7 +8,9 @@
 {% block content %}
 <section class="cat-container">
   <div class="cat-img">
-    <img src="{{ idea.img.url }}" alt="Image of {{ idea.name }}" />
+    {%if idea.img%}
+    <img src="{{ idea.img.url }}" alt="Image of {{ idea.name }}" width= 100%/>
+    {% endif %}
   </div>
   <div class="cat-details">
     <h1>Name of Idea: {{ idea.name }}</h1>

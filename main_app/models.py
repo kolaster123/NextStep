@@ -17,7 +17,7 @@ class DifficultyLevel(Enum):
 
 class Idea(models.Model):
     name = models.CharField(max_length=50)
-    img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100,)
+    img = models.ImageField(null= True, blank= True, upload_to='images/',)
     company = models.CharField(max_length=50)
     details = models.TextField(max_length=500)
     difficulty = models.IntegerField(choices=[(tag.value, tag.name) for tag in DifficultyLevel], default= 1)

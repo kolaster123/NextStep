@@ -196,25 +196,9 @@
     }
   
     .cat-img {
-      width: 25%;
-      max-width: 250px;
+      width: 5%;
+      max-width: 20px;
       margin-right: 25px;
     }
-  
-    .feedings-toy-container {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: flex-start;
-    }
-  
-    .feedings-toy-container > section {
-      width: 45%;
-    }
+
   }
-  
-  @media only screen and (min-width: 1024px) {
-    .feedings-toy-container {
-      padding: 0 40px;
-    }
-  }
-  
