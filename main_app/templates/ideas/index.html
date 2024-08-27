@@ -14,7 +14,7 @@
 <section class="card-container">
   {% for idea in ideas %}
     <div class="card">
-      <a href= "/ideas/{{idea.id}}">
+      <a href= "{% url 'idea-detail' idea.id %}">
       <div class="card-content">
         <div class="card-img-container">
           <img
@@ -26,19 +26,7 @@
         <p><img src={{idea.img}} alt="this is a mistake"/></p>
         <p> {{idea.company}}</p>
         <p><small>{{ idea.details }}</small></p>
-      <select>
-        <p> {{idea.difficulty}}</p>
-        <option value= "ONE"> 1 </option>
-        <option value= "TWO"> 2 </option>
-        <option value= "THREE"> 3 </option>
-        <option value= "FOUR"> 4 </option>
-        <option value= "FIVE"> 5 </option>
-        <option value= "SIX"> 6 </option>
-        <option value= "SEVEN"> 7 </option>
-        <option value= "EIGHT"> 8 </option>
-        <option value= "NINE"> 9 </option>
-        <option value= "TEN"> 10 </option>
-      </select>
+        <p> Difficulty: {{idea.difficulty}}</p>
       </div>
       </a>
     </div>

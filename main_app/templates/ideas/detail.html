@@ -1,21 +1,32 @@
 {% extends 'base.html' %} 
 {% load static %} 
+
 {% block head %}
-<link rel="stylesheet" href="{% static 'css/cats/cat-detail.css' %}" />
+<link rel="stylesheet" href="{% static 'css/ideas/idea-detail.css' %}" />
 {% endblock %} 
+
 {% block content %}
 <section class="cat-container">
   <div class="cat-img">
-    <img src="{% static 'images/sk8r-boi-cat.svg' %}" alt="A skater boy cat" />
+    <img src="{{ idea.img.url }}" alt="Image of {{ idea.name }}" />
   </div>
   <div class="cat-details">
-    <h1>{{ cat.name }}</h1>
-    {% if cat.age > 0 %}
-      <h2>A {{ cat.age }} year old {{ cat.breed }}</h2>
-    {% else %}
-      <h2>A {{ cat.breed }} kitten.</h2>
-    {% endif %}
-    <p>{{ cat.description }}</p>
+    <h1>Name of Idea: {{ idea.name }}</h1>
+    <h2>Company: {{ idea.company }}</h2>
+    <p>Details: {{ idea.details }}</p>
+    <p> Difficulty: {{idea.difficulty}}</p>
+    <select>
+        <option value= "ONE"> 1 </option>
+        <option value= "TWO"> 2 </option>
+        <option value= "THREE"> 3 </option>
+        <option value= "FOUR"> 4 </option>
+        <option value= "FIVE"> 5 </option>
+        <option value= "SIX"> 6 </option>
+        <option value= "SEVEN"> 7 </option>
+        <option value= "EIGHT"> 8 </option>
+        <option value= "NINE"> 9 </option>
+        <option value= "TEN"> 10 </option>
+      </select>
   </div>
 </section>
 {% endblock %}
