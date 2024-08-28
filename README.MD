@@ -6,7 +6,9 @@ NextStep is for whenever you get those thoughts of creativity about how to impro
 
 ## All the links
 [Deployed project link:](https://nextstep-d44aeb47a178.herokuapp.com/)
+
 [GitHub repo link:](https://github.com/kolaster123/NextStep/tree/main)
+
 [TrelloBoard](https://trello.com/b/9OLoo1nTnextstep-innovations-taking-whats-good-and-making-it-even-better)
 
 
