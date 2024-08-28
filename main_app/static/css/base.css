@@ -9,7 +9,7 @@ body {
 }
 
 .navbar {
-  background-color: #e68c8c;
+  background-color: #628395;
   padding: 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -61,7 +61,7 @@ body {
 
 .logo-container img {
   padding: 10px;
-  background-color: rgb(147, 190, 228);
+
   border-radius: 50%;
   width: 50px;
   height: 50px; 
