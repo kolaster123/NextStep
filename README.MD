@@ -5,14 +5,15 @@
 NextStep is for whenever you get those thoughts of creativity about how to improve something. This has the potential to capitalize on your ideas. First you would come up with the name of the idea then get the company to potentially work with them. The details of it and if you have a sketch or image of the idea an option to put it up as well as the difficulty scale 1 being easy to 10 being hardest to implement.
 
 ## All the links
-[Deployed project link:]()
+[Deployed project link:](https://nextstep-d44aeb47a178.herokuapp.com/)
 [GitHub repo link:](https://github.com/kolaster123/NextStep/tree/main)
+[TrelloBoard](https://trello.com/b/9OLoo1nTnextstep-innovations-taking-whats-good-and-making-it-even-better)
 
 
 ## Attributions
 
-[geekforgeeks](https://www.geeksforgeeks.org/imagefield-django-models/
-https://docs.djangoproject.com/en/2.2/ref/forms/widgets/#django.forms.ClearableFileInput)
+
+[geeksforgeeks](https://www.geeksforgeeks.org/imagefield-django-models/)
 
 [background remover](https://www.remove.bg/)
 
