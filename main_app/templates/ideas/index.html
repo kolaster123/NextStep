@@ -1,36 +1,35 @@
 {% extends 'base.html' %} 
 {% load static %} 
+
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/ideas/idea-index.css' %}"/>
 {% endblock %} 
-{% block content %}
 
+{% block content %}
 <section class="page-header">
   <h1>Idea List</h1>
-  <img src="{% static 'images/logo.png' %}" alt="A cool cat" />
-
+  <img src="{% static 'images/bgremove.png' %}" alt="A cool cat" width= 10% />
 </section>
 
 <section class="card-container">
   {% for idea in ideas %}
     <div class="card">
-      <a href= "{% url 'idea-detail' idea.id %}">
-      <div class="card-content">
-        <div class="card-img-container">
-          <img
-            src="{% static 'images/sk8r-boi-cat.svg' %}"
-            alt="A skater boy cat"
-          />
+      <a href="{% url 'idea-detail' idea.id %}">
+        <div class="card-content">
+          <div class="card-img-container">
+            {% if idea.img %}
+              <img src="{{ idea.img.url }}" alt="{{ idea.name }}"width= 50%% />
+            {% else %}
+              <img src="{% static 'images/default-image.png' %}" alt="Default Image"/> 
+            {% endif %}
+          </div>
+          <h2 class="card-title">{{ idea.name }}</h2>
+          <p>{{ idea.company }}</p>
+          <p><small>{{ idea.details }}</small></p>
+          <p>Difficulty: {{ idea.difficulty }}</p>
         </div>
-        <h2 class="card-title">{{ idea.name }}</h2>
-        <p><img src={{idea.img}} alt="this is a mistake"/></p>
-        <p> {{idea.company}}</p>
-        <p><small>{{ idea.details }}</small></p>
-        <p> Difficulty: {{idea.difficulty}}</p>
-      </div>
       </a>
     </div>
   {% endfor %} 
 </section>
-
 {% endblock %}
