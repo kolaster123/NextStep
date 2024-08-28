@@ -10,7 +10,8 @@ NextStep is for whenever you get those thoughts of creativity about how to impro
 
 
 ## Attributions
-[Fieldtypes](https://www.geeksforgeeks.org/imagefield-django-models/
+
+[geekforgeeks](https://www.geeksforgeeks.org/imagefield-django-models/
 https://docs.djangoproject.com/en/2.2/ref/forms/widgets/#django.forms.ClearableFileInput)
 
 [background remover](https://www.remove.bg/)
