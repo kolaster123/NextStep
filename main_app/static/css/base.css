@@ -5,12 +5,13 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: rgb(209, 200, 200)
+  background-color: rgb(209, 200, 200);
 }
 
 .navbar {
   background-color: #e68c8c;
   padding: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nav-container {
@@ -28,6 +29,7 @@ body {
 .links-container {
   flex-grow: 1;
   text-align: right;
+  
 }
 
 .links {

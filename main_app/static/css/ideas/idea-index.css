@@ -1,87 +1,41 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.page-header {
-  text-align: center;
-  padding: 20px;
-  background-color: #e68c8c;
-  color: #fff;
-}
-
-.page-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-.page-header img {
-  margin-top: 10px;
-  width: 100px;
-  height: auto;
-  border-radius: 50%;
-}
-
-.card-container {
+.container-index{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  align-items: center;
 }
-
 .card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  width: 300px;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
+  background-color: aquamarine;
+  padding: 20px;
+  flex-wrap: wrap;
+  border-radius: 10PX;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card-img-container {
-  max-height: 150px; /* Set a maximum height for the image container */
-  overflow: hidden; /* Hide any overflow to maintain uniformity */
-}
-
-.card-img-container img {
-  width: 50%; /* Set image width to 50% of the container */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure the image is treated as a block-level element */
-  margin: 0 auto; /* Center the image horizontally within its container */
-}
-
-.card-title {
-  font-size: 1.5em;
-  margin: 10px 0;
-  color: #333;
-}
-
-.card p {
-  margin: 5px 0;
-  color: #666;
-}
-
-.card p small {
-  font-size: 0.9em;
-  color: #999;
-}
-
-a {
-  text-decoration: none;
+.card a {
+  text-decoration: none; 
   color: inherit;
 }
-
-a:hover {
-  color: #e68c8c;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  list-style-type: none;
 }
+.card-img-container{
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+}
+.card-img-container img{
+  max-width: 50%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+}  
+
+
+
+

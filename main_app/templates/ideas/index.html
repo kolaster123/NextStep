@@ -8,24 +8,23 @@
 {% block content %}
 <section class="page-header">
   <h1>Idea List</h1>
-  <img src="{% static 'images/bgremove.png' %}" alt="A cool cat" width= 10% />
 </section>
 
-<section class="card-container">
+<section class="container-index">
   {% for idea in ideas %}
     <div class="card">
       <a href="{% url 'idea-detail' idea.id %}">
         <div class="card-content">
           <div class="card-img-container">
             {% if idea.img %}
-              <img src="{{ idea.img.url }}" alt="{{ idea.name }}"width= 50%% />
+              <img src="{{ idea.img.url }}" alt="{{ idea.name }}" />
             {% else %}
               <img src="{% static 'images/default-image.png' %}" alt="Default Image"/> 
             {% endif %}
           </div>
-          <h2 class="card-title">{{ idea.name }}</h2>
-          <p>{{ idea.company }}</p>
-          <p><small>{{ idea.details }}</small></p>
+          <h2 class="card-title">Name: {{ idea.name }}</h2>
+          <p>Company: {{ idea.company }}</p>
+          <p><small>Details: {{ idea.details }}</small></p>
           <p>Difficulty: {{ idea.difficulty }}</p>
         </div>
       </a>

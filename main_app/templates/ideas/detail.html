@@ -6,20 +6,20 @@
 {% endblock %} 
 
 {% block content %}
-<section class="cat-container">
-  <div class="cat-img">
+<section class="container-index">
+  <div class="card-img-container">
     {%if idea.img%}
     <img src="{{ idea.img.url }}" alt="Image of {{ idea.name }}" width= 300px/>
     {% endif %}
   </div>
-  <div class="cat-details">
+  <div class="card-content">
     <h1>Name of Idea: {{ idea.name }}</h1>
     <h2>Company: {{ idea.company }}</h2>
     <p>Details: {{ idea.details }}</p>
     <p> Difficulty: {{idea.difficulty}}</p>
     <div class="cat-actions">
-    <a href="{% url 'idea-update' idea.id %}" class="btn warn">Edit</a>
-    <a href="{% url 'idea-delete' idea.id %}" class="btn danger">Delete</a>
+      <a href="{% url 'idea-update' idea.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'idea-delete' idea.id %}" class="btn danger">Delete</a>
   </div>
 </section>
 {% endblock %}
