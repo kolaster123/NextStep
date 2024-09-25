@@ -35,5 +35,3 @@ class Idea(models.Model):
     
     def get_absolute_url(self):
         return reverse('idea-detail', kwargs={'idea_id': self.id})
-
-

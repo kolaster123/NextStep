@@ -10,5 +10,6 @@ urlpatterns = [
     path('ideas/<int:idea_id>/', views.idea_detail, name='idea-detail'),
     path('ideas/create/', views.IdeaCreate.as_view(), name='idea-create'),
     path('ideas/<int:pk>/update/', views.IdeaUpdate.as_view(), name='idea-update'),
-    path('ideas/<int:pk>/delete/', views.IdeaDelete.as_view(), name='idea-delete')
+    path('ideas/<int:pk>/delete/', views.IdeaDelete.as_view(), name='idea-delete'),
+    path('register/', views.register_view, name="register"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)  

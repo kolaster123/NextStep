@@ -1,10 +1,13 @@
-{% extends 'base.html' %}  
-{% load static %} 
-{% block content %}
+{% extends 'base.html' %}
+{% load static %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}" />
+{% endblock %}
+
+{% block content %}
 <div class="page-header">
   <h1>Delete Idea?</h1>
-  <img src="{% static 'images/nerd-cat.svg' %}" alt="A cat using a computer" />
 </div>
 
 <h2>Are you sure you want to delete {{ idea.name }}?</h2>
@@ -14,5 +17,4 @@
   <a href="{% url 'idea-detail' idea.id %}" class="btn secondary">Cancel</a>
   <button type="submit" class="btn danger">Yes - Delete!</button>
 </form>
-
 {% endblock %}
